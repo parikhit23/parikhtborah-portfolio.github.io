@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Parikhit Borah | Portfolio</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f4f4f4;
+      color: #333;
+    }
+    header {
+      background: #333;
+      color: white;
+      padding: 1em 0;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    nav {
+      max-width: 1200px;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 20px;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    section {
+      padding: 60px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    .hidden { display: none; }
+    footer {
+      background: #222;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <nav>
+    <h1>Parikhit</h1>
+    <ul>
+      <li><a onclick="showPage('home')">Home</a></li>
+      <li><a onclick="showPage('about')">About</a></li>
+      <li><a onclick="showPage('experience')">Experience</a></li>
+      <li><a onclick="showPage('projects')">Projects</a></li>
+      <li><a onclick="showPage('contact')">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<!-- Sections -->
+<section id="home">
+  <h2>Welcome to My Portfolio 👋</h2>
+  <p>I’m Parikhit Borah, a Computer Science student and passionate developer.</p>
+</section>
+
+<section id="about" class="hidden">
+  <h2>About Me</h2>
+  <p>I am a 3rd-year B.Tech CSE student with interests in web dev, networking, and AI. I enjoy building creative and useful software projects.</p>
+</section>
+
+<section id="experience" class="hidden">
+  <h2>Experience</h2>
+  <ul>
+    <li><strong>Web Developer Intern:</strong> Created portfolio sites & landing pages.</li>
+    <li><strong>6G Research:</strong> Worked on simulation and analysis in NS3.</li>
+    <li><strong>Teaching Assistant:</strong> Supported juniors in DSA, CN, OS.</li>
+  </ul>
+</section>
+
+<section id="projects" class="hidden">
+  <h2>My Projects</h2>
+  <ul>
+    <li>🌐 Portfolio Website</li>
+    <li>🤖 Chatbot with Sentiment Analysis</li>
+    <li>📡 6G Network Simulation (NS3)</li>
+  </ul>
+</section>
+
+<section id="contact" class="hidden">
+  <h2>Contact Me</h2>
+  <p>Email: parikhitborah390@gmail.com</p>
+  <p>GitHub: <a href="https://github.com/parikhit23" target="_blank">parikhit23</a></p>
+  <p>LinkedIn: <a href="https://www.linkedin.com/in/parikhit-borah-0abb68260" target="_blank">linkedin.com/in/parikhit-borah-0abb68260</a></p>
+  <p>TryHackMe: <a href="https://tryhackme.com/p/parikhitborah390" target="_blank">tryhackme.com/p/parikhitborah390</a></p>
+  <p>LeetCode: <a href="https://leetcode.com/u/Parikhit1/" target="_blank">leetcode.com/u/Parikhit1</a></p>
+</section>
+
+<!-- Footer -->
+<footer>
+  <p>&copy; 2025 Parikhit Borah. All rights reserved.</p>
+</footer>
+
+<!-- JS to Handle Navigation -->
+<script>
+  function showPage(pageId) {
+    const sections = document.querySelectorAll("section");
+    sections.forEach(sec => sec.classList.add("hidden"));
+    document.getElementById(pageId).classList.remove("hidden");
+    window.scrollTo(0, 0);
+  }
+</script>
+
+</body>
+</html>
